@@ -7,6 +7,10 @@ import { Navbar } from './Components/Navbar'
 import { Hero } from './Components/Hero'
 import { Counts } from './Components/Counts'
 import { ToolsSection } from './Components/ToolsSection'
+import StepsSection from './Components/Steps'
+import PricingSection from './Components/PricingSection'
+import TransformSection from './Components/TransformSection'
+import Footer from './Components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +24,10 @@ function App() {
       <Hero />
       <Counts/>
       <ToolsSection/>
+      <StepsSection/>
+      <PricingSection/>
+      <TransformSection/>
+      <Footer/>
     </>
   )
 }
