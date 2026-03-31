@@ -1,6 +1,7 @@
 import React from 'react'
+import { CiShoppingCart } from 'react-icons/ci'
 
-export const Navbar = () => {
+export const Navbar = ({ addedProducts }) => {
   return (
     <div className="navbar  text-black max-w-300 mx-auto">
       <div className="navbar-start">
@@ -30,7 +31,12 @@ export const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <div className='relative'>
+
+          <CiShoppingCart className='bg-purple-100 text-3xl p-1 rounded-full' />
+          <span className='absolute top-0 right-0 bg-purple-500 rounded-full text-white'>{addedProducts.length ? addedProducts.length : ''}</span>
+        </div>
+
         <button className='px-4'>Login</button>
         <button className='bg-linear-to-r from-blue-500 to-purple-600  text-white rounded-full px-4 py-2'>Get Started</button>
 

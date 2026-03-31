@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Products } from './Products'
 import { Cart } from './Cart'
 
-export const ToolsSection = () => {
+export const ToolsSection = ({addedProducts, setAddedProducts}) => {
     const [active, setActive] = useState('products')
     return (
         <div className='max-w-300 mx-auto text-black mt-9'>
@@ -31,10 +31,10 @@ export const ToolsSection = () => {
             </div>
 
             {
-                active === 'products' && <Products/>
+                active === 'products' && <Products  addedProducts={addedProducts} setAddedProducts={setAddedProducts}/>
             }
             {
-                active === 'cart' && <Cart/>
+                active === 'cart' && <Cart  addedProducts={addedProducts} setAddedProducts={setAddedProducts}/>
             }
         </div>
     )

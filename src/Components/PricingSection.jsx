@@ -1,3 +1,4 @@
+import { TiTick } from "react-icons/ti";
 
 const pricingPlans = [
     {
@@ -102,7 +103,8 @@ const PricingSection = () => {
                             <ul className={`mt-5 space-y-2 text-sm ${plan.tag ? 'text-white' : 'text-gray-700'} text-left`}>
                                 {plan.features.map((feature, i) => (
                                     <li key={i} className="flex items-center gap-2">
-                                        <i className="fa fa-check text-green-600"  aria-hidden="true"></i>
+                                        <TiTick className="text-green-500"/>
+
                                         {feature}
                                     </li>
                                 ))}

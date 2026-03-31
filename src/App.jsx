@@ -13,17 +13,18 @@ import TransformSection from './Components/TransformSection'
 import Footer from './Components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [addedProducts, setAddedProducts] = useState([]);
 
   return (
     <>
       <div className='shadow-sm'>
 
-        <Navbar />
+        <Navbar addedProducts={addedProducts}/>
       </div>
       <Hero />
       <Counts/>
-      <ToolsSection/>
+      <ToolsSection addedProducts={addedProducts} setAddedProducts={setAddedProducts}/>
       <StepsSection/>
       <PricingSection/>
       <TransformSection/>
