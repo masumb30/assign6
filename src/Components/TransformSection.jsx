@@ -1,6 +1,6 @@
 const TransformSection = () => {
   return (
-    <div className="bg-linear-to-r from-purple-500 to-blue-500 text-white mt-20 px-4">
+    <div className="bg-linear-to-r from-blue-500 to-purple-500 text-white mt-20 px-4">
       
       <div className="rounded-2xl max-w-300 mx-auto text-center py-12 px-6">
         

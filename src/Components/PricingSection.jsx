@@ -70,7 +70,7 @@ const PricingSection = () => {
                 {pricingPlans.map((plan) => (
                     <div
                         key={plan.id}
-                        className={`relative p-6 rounded-2xl border bg-white shadow-sm flex flex-col justify-between ${plan.tag ? "border-purple-500 shadow-lg bg-linear-to-r from-purple-500 to-blue-500 text-white" : ""
+                        className={`relative p-6 rounded-2xl  bg-purple-200/10 shadow-sm flex flex-col justify-between ${plan.tag ? "border-purple-500 shadow-lg bg-linear-to-r from-purple-500 to-blue-500 text-white" : ""
                             }`}
                     >
                         <div>

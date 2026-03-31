@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const Cart = ({addedProducts, setAddedProducts}) => {
   const [active, setActive] = useState("products");
@@ -6,12 +7,17 @@ const Cart = ({addedProducts, setAddedProducts}) => {
   const total = addedProducts.reduce((sum, item) => sum + item.price, 0);
   const removeFromCart = (id)=> {
     const newProducts = addedProducts.filter(p=> p.id !== id);
-    setAddedProducts(newProducts)
+    setAddedProducts(newProducts);
+    toast('Removed from cart')
+  }
+  const handleCheckout = ()=> {
+  setAddedProducts([])
+  toast('Checkout successfull')
   }
 
   return (
     <div className="max-w-300 mx-auto mt-16 px-4">
-      
+      <ToastContainer/>
       <p className="text-3xl font-bold mb-3">Your Cart:</p>
 
           <div className="mx-auto  rounded-xl p-6 bg-white shadow-sm">
@@ -49,7 +55,7 @@ const Cart = ({addedProducts, setAddedProducts}) => {
                   <span>${total.toFixed(2)}</span>
                 </div>
 
-                <button onClick={()=>(setAddedProducts([]))} className="mt-5 w-full py-3 rounded-lg bg-linear-to-r from-purple-500 to-blue-500 text-white font-medium">
+                <button onClick={handleCheckout} className="mt-5 w-full py-3 rounded-lg bg-linear-to-r from-purple-500 to-blue-500 text-white font-medium">
                   Proceed to Checkout
                 </button>
               </>

@@ -1,4 +1,5 @@
 import { TiTick } from "react-icons/ti";
+import { toast, ToastContainer } from "react-toastify";
 
 const ProductCard = ({ product, addedProducts, setAddedProducts }) => {
     const tagStyles = {
@@ -9,11 +10,12 @@ const ProductCard = ({ product, addedProducts, setAddedProducts }) => {
 
     const handleAddProduct = () => {
         setAddedProducts([...addedProducts, product]);
+        toast('Added to cart successfully')
     }
 
     return (
         <div className="p-2 rounded-2xl  bg-white shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
-
+<ToastContainer/>
             {/* Tag */}
             <div className="flex justify-end">
                 <span

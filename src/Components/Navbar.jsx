@@ -34,7 +34,7 @@ export const Navbar = ({ addedProducts }) => {
         <div className='relative'>
 
           <CiShoppingCart className='bg-purple-100 text-3xl p-1 rounded-full' />
-          <span className='absolute top-0 right-0 bg-purple-500 rounded-full text-white'>{addedProducts.length ? addedProducts.length : ''}</span>
+          <span className='absolute top-[-10px]  right-0 bg-purple-500 rounded-full text-white w-[15px] text-center'>{addedProducts.length ? addedProducts.length : ''}</span>
         </div>
 
         <button className='px-4'>Login</button>
