@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Products } from './Products'
-import { Cart } from './Cart'
+import  Cart from './Cart'
 
 export const ToolsSection = ({addedProducts, setAddedProducts}) => {
     const [active, setActive] = useState('products')
